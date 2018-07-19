@@ -16,5 +16,12 @@ export default (appInfo: EggAppInfo) => {
 
     config.middleware = [];
 
+    config.view = {
+        defaultViewEngine: 'nunjucks',
+        mapping: {
+            '.tpl': 'nunjucks'
+        }
+    }
+
     return config;
 }

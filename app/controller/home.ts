@@ -3,6 +3,6 @@ import { Controller } from 'egg';
 export default class HomeController extends Controller {
     public async index () {
         const { ctx } = this;
-        ctx.body = await ctx.service.hello.sayHi('ouyang');
+        ctx.body = 'Hell world ouyang';
     }
 }
