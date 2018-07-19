@@ -17,6 +17,8 @@
 - [x] service
 - [x] middleware
 - [ ] extend
+- [x] extend/appliaction
+- [x] extend/context
 - [x] config/view
 - [x] config/middleware
 - [x] config/plugin
