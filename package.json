@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "server starter ts",
   "main": "index.js",
+  "egg": {
+    "typescript": true
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "egg-bin dev --ts --require egg-ts-helper/register"
+    "dev": "egg-bin dev --require egg-ts-helper/register"
   },
   "repository": {
     "type": "git",
