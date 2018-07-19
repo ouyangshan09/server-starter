@@ -7,8 +7,12 @@
     "typescript": true
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "egg-bin dev --require egg-ts-helper/register"
+    "test": "egg-bin test --require egg-ts-helper/register",
+    "cov": "egg-bin cov --require egg-ts-helper/register",
+    "debug": "egg-btn debug --require egg-ts-helper/register",
+    "dev": "egg-bin dev --require egg-ts-helper/register",
+    "clean": "ets clean",
+    "tsc": "ets && tsc -p tsconfig.json"
   },
   "repository": {
     "type": "git",
