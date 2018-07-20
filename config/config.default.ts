@@ -10,12 +10,30 @@ export interface News {
     serverUrl: string;
 }
 
+export interface MySQLClient {
+    host: string;
+    port: string;
+    user: string;
+    password: string;
+    database: string;
+}
+
+// MySQL结构
+export interface MySQL {
+    client?: MySQLClient,
+    clients?: Array<MySQLClient>
+    default?: MySQLClient,
+    app?: boolean;
+    agent?: boolean;
+}
+
 export interface BizConfig {
     sourceUrl: string;
     news: News,
     robot?: {
         ua: Array<RegExp>;
     }
+    mysql: MySQL;
 }
 
 export default (appInfo: EggAppInfo) => {
@@ -43,6 +61,18 @@ export default (appInfo: EggAppInfo) => {
         ua: [
             /Baiduspider/i
         ]
+    }
+
+    config.mysql = {
+        client: {
+            host: 'localhost',
+            port: '3306',
+            user: 'root',
+            password: '123456',
+            database: 'demo'
+        },
+        app: true,
+        agent: false
     }
 
     return config;

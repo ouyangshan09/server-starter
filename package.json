@@ -31,6 +31,7 @@
   "homepage": "https://github.com/ouyangshan09/server-starter#readme",
   "dependencies": {
     "egg": "^2.9.1",
+    "egg-mysql": "^3.0.0",
     "egg-scripts": "^2.6.0",
     "egg-view-nunjucks": "^2.2.0",
     "typescript": "^2.9.2"
