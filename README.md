@@ -33,3 +33,4 @@
 ### 记录
 
 - package.json 中的`ets`命令属于`egg-ts-helper`中的功能，作用用于清除编译后的.js文件
+- 测试环境中的assert应该属于`egg-bin`集成好的模块
