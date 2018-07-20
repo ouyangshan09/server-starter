@@ -27,8 +27,13 @@
 - [x] config/view
 - [x] config/middleware
 - [x] config/plugin
-- [ ] unit test && cov
+- [x] unit test && cov
 - [x] debug(vscode-eggjs)插件调试
+
+## 插件封装
+
+- [] mysql
+- [] dockerfile
 
 ### 记录
 
