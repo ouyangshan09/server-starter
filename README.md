@@ -19,6 +19,8 @@
 - [ ] extend
 - [x] extend/appliaction
 - [x] extend/context
+- [x] extend/reqeust
+- [x] extend/response
 - [x] config/view
 - [x] config/middleware
 - [x] config/plugin

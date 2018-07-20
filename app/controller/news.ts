@@ -2,6 +2,8 @@ import { Controller } from 'egg';
 
 class NewsController extends Controller {
     public async list () {
+        this.ctx.request.demo({name: 'reqeust ouyangshan09'});
+        this.ctx.response.demo({name: 'response ouyangshan09'});
         this.app.foo({name: 'ouyangshan09'});
         this.ctx.demo;
         const ctx = this.ctx;
