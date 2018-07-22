@@ -12,12 +12,6 @@ class NewsController extends Controller {
         const newList = await ctx.service.news.list(page);
         await ctx.render('list.tpl', newList);
     }
-
-    public async create () {
-        const result = await this.ctx.service.news.create();
-        console.log('create result:', result);
-        this.ctx.body = 'insert column';
-    }
 }
 
 export default NewsController;

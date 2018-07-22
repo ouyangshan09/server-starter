@@ -13,10 +13,6 @@ class NewsService extends Service {
         }
         return dataList;
     }
-
-    public async create () {
-        return await this.app.mysql.select('user');
-    }
 }
 
 export default NewsService;
