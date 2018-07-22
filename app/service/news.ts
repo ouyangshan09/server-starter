@@ -4,8 +4,7 @@ import { Service } from 'egg';
 class NewsService extends Service {
     public async list (page: number = 1) {
         const { serverUrl, pageSize } = this.config.news;
-        this.ctx.logger.info('this.mysql:', this.app);
-        this.app.mysql.get('1', { id: 12 })
+        this.ctx.logger.info('this.mysql:', this.app.mysql)
         const dataList = {
             list: [
                 { id: 1, title: 'this is news 1', url: '/news/1' },
@@ -13,6 +12,10 @@ class NewsService extends Service {
             ]
         }
         return dataList;
+    }
+
+    public async create () {
+        return await this.app.mysql.select('user');
     }
 }
 
