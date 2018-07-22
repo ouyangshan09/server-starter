@@ -3,7 +3,7 @@
 */
 import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg';
 
-export type DefaultConfig = PowerPartial<EggAppConfig & BizConfig>;
+export type DefaultConfig = PowerPartial<EggAppConfig & Config>;
 
 export interface News {
     pageSize: number;
@@ -27,7 +27,7 @@ export interface MySQL {
     agent?: boolean;
 }
 
-export interface BizConfig {
+export interface Config {
     sourceUrl: string;
     news: News,
     robot?: {
@@ -36,7 +36,7 @@ export interface BizConfig {
 }
 
 export default (appInfo: EggAppInfo) => {
-    const config = {} as PowerPartial<EggAppConfig> & BizConfig;
+    const config = {} as PowerPartial<EggAppConfig> & Config;
 
     config.keys = appInfo.name + 'ouyangshan09';
 
