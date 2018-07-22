@@ -14,7 +14,6 @@
     "clean": "ets clean",
     "tsc": "ets && tsc -p tsconfig.json",
     "migrate:new": "egg-sequelize migration:create",
-    "migrate:init": "egg-sequelize init",
     "migrate:up": "egg-sequelize db:migrate",
     "migrate:down": "egg-sequelize db:migrate:undo"
   },
