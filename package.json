@@ -12,7 +12,11 @@
     "debug": "egg-bin debug --require egg-ts-helper/register",
     "dev": "egg-bin dev --require egg-ts-helper/register",
     "clean": "ets clean",
-    "tsc": "ets && tsc -p tsconfig.json"
+    "tsc": "ets && tsc -p tsconfig.json",
+    "migrate:new": "egg-sequelize migration:create",
+    "migrate:init": "egg-sequelize init",
+    "migrate:up": "egg-sequelize db:migrate",
+    "migrate:down": "egg-sequelize db:migrate:undo"
   },
   "repository": {
     "type": "git",
