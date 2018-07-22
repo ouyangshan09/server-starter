@@ -3,7 +3,6 @@ import { Service } from 'egg';
 
 class NewsService extends Service {
     public async list (page: number = 1) {
-        const { serverUrl, pageSize } = this.config.news;
         this.ctx.logger.info('this.mysql:', this.app.mysql)
         const dataList = {
             list: [

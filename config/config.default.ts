@@ -5,11 +5,6 @@ import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg';
 
 export type DefaultConfig = PowerPartial<EggAppConfig & Config>;
 
-export interface News {
-    pageSize: number;
-    serverUrl: string;
-}
-
 export interface MySQLClient {
     host: string;
     port: string;
@@ -29,7 +24,6 @@ export interface MySQL {
 
 export interface Config {
     sourceUrl: string;
-    news: News,
     robot?: {
         ua: Array<RegExp>;
     }
