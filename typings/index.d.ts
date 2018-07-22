@@ -26,8 +26,8 @@ interface MySQLClient {
     select: <T>(table: string, options?: object) => T;
     get: <T>(table: string, where?: object, options?: object) => T;
     insert: (table: string, row: object, options?: object) => InsertResult;
-    update: <T>(table: string, row: object, options?: object) => T;
-    delete: <T>(table: string, where: object) => T;
+    update: (table: string, row: object, options?: object) => InsertResult;
+    delete: (table: string, where: object) => InsertResult;
     count: (table: string, where: object) => number;
     commit: () => any;
     rollback: () => any;
