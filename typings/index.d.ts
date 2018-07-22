@@ -20,17 +20,21 @@ interface MySQL {
 }
 
 interface MySQLClient {
-    query: (sql: string, values: object) => any;
-    insert: (sql: string, rows: object, options?: object) => any;
-    select: (sql: string, options?: object) => any;
-    update: (sql: string, row: object, options?: object) => any;
-    delete: (sql: string, where: object) => any;
-    // get a row
-    get: (table: string, where: object, options: object) => any;
-    count: (sql: string, where: object) => number
-    // // ==== 事务
-    // beginTransaction: () => MySQLClient;
-    // // yield method
-    // rollback: () => any;
-    // commit: () => void;
+    /** 缩放返回都必须是可执行 yield method */ 
+    query: <T>(sql: string, values: object) => T;
+    queryOne: <T>(sql: string, values: object) => T;
+    select: <T>(table: string, options?: object) => T;
+    get: <T>(table: string, where?: object, options?: object) => T;
+    insert: <T>(table: string, row: object, options?: object) => T;
+    update: <T>(table: string, row: object, options?: object) => T;
+    delete: <T>(table: string, where: object) => T;
+    count: (table: string, where: object) => number;
+    commit: () => any;
+    rollback: () => any;
+}
+
+interface Transactions {
+    /** 缩放返回都必须是可执行 yield method */
+    beginTransaction: () => MySQLClient;
+    beginTransactionScope: <T>(scope: MySQLClient, ctx?: any) => T;
 }
