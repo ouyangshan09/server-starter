@@ -2,4 +2,4 @@
 // Do not modify this file!!!!!!!!!
 
 import 'egg-view-nunjucks';
-import 'egg-mysql';
+import 'egg-sequelize';

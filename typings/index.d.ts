@@ -3,6 +3,7 @@
  * @author Ouyang
 */
 import { IHelper, Context, Application } from 'egg';
+import 'egg-sequelize';
 
 declare module 'egg' {
     interface IHelper {
@@ -10,8 +11,19 @@ declare module 'egg' {
         application: Application
     }
 
+    // extend Application
     interface Application {
-        mysql: MySQL & MySQLClient
+        mysql: any;
+    }
+
+    // extend Context 
+    interface Context {
+        //
+    }
+
+    // extend EggAppConfig
+    interface EggAppConfig {
+        //
     }
 }
 

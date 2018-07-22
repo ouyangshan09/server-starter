@@ -33,7 +33,6 @@ export interface BizConfig {
     robot?: {
         ua: Array<RegExp>;
     }
-    mysql: MySQL;
 }
 
 export default (appInfo: EggAppInfo) => {
@@ -63,16 +62,13 @@ export default (appInfo: EggAppInfo) => {
         ]
     }
 
-    config.mysql = {
-        client: {
-            host: 'localhost',
-            port: '3306',
-            user: 'root',
-            password: '123456',
-            database: 'demo'
-        },
-        app: true,
-        agent: false
+    config.sequelize = {
+        dialect: 'mysql',
+        database: 'demo',
+        host: '127.0.0.1',
+        port: 3306,
+        username: 'root',
+        password: '123456'
     }
 
     return config;
