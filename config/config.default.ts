@@ -38,12 +38,12 @@ export default (appInfo: EggAppInfo) => {
         'robot'
     ];
 
-    // config.view = {
-    //     defaultViewEngine: 'nunjucks',
-    //     mapping: {
-    //         '.tpl': 'nunjucks'
-    //     }
-    // }
+    config.view = {
+        defaultViewEngine: 'nunjucks',
+        mapping: {
+            '.tpl': 'nunjucks'
+        }
+    }
 
     config.robot = {
         ua: [
