@@ -38,17 +38,12 @@ export default (appInfo: EggAppInfo) => {
         'robot'
     ];
 
-    config.view = {
-        defaultViewEngine: 'nunjucks',
-        mapping: {
-            '.tpl': 'nunjucks'
-        }
-    }
-
-    config.news = {
-        pageSize: 5,
-        serverUrl: 'https://hacker-news.firebaseio.com/v0'
-    }
+    // config.view = {
+    //     defaultViewEngine: 'nunjucks',
+    //     mapping: {
+    //         '.tpl': 'nunjucks'
+    //     }
+    // }
 
     config.robot = {
         ua: [
@@ -59,6 +54,7 @@ export default (appInfo: EggAppInfo) => {
     config.sequelize = {
         dialect: 'mysql',
         database: 'demo',
+        databaseVersion: 1.0,
         host: '127.0.0.1',
         port: 3306,
         username: 'root',
