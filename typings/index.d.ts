@@ -3,7 +3,7 @@
  * @author Ouyang
 */
 import { IHelper, Context, Application } from 'egg';
-import 'egg-sequelize';
+import '@oys/egg-sequelize';
 
 declare module 'egg' {
     interface IHelper {

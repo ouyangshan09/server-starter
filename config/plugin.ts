@@ -10,7 +10,7 @@ const plugin: EggPlugin = {
     },
     sequelize: {
         enable: true,
-        package: 'egg-sequelize'
+        package: '@oys/egg-sequelize'
     }
 };
 
